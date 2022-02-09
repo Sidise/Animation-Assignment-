@@ -6,9 +6,9 @@ ASSET_MANAGER.queueDownload("./sailorMoon.png");
 ASSET_MANAGER.downloadAll(() => {
 	const canvas = document.getElementById("gameWorld");
 	const ctx = canvas.getContext("2d");
-
-gameEngine.addEntity(new sailorMoon(this.gameEngine));
 	gameEngine.init(ctx);
+
+	gameEngine.addEntity(new sailorMoon(gameEngine));
 
 	gameEngine.start();
 });
